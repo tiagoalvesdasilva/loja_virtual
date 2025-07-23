@@ -1,0 +1,43 @@
+<nav class="navbar" (mouseleave)="closeDropdown()">
+
+  <div class="logo">
+    <span class="flex">RA</span>
+    <span class="estilo">CLOSET</span>
+  </div>
+
+  <ul class="menu">
+    <li><a href="#">LANÇAMENTOS</a></li>
+
+    <li class="dropdown"
+        (mouseenter)="toggleDropdown('roupas')"
+        [class.active]="openDropdown === 'roupas'">
+      <a href="javascript:void(0)">ROUPAS <i class="fa fa-caret-down"></i></a>
+      <ul class="dropdown-menu" *ngIf="openDropdown === 'roupas'">
+        <li><a href="#">Camisetas</a></li>
+        <li><a href="#">Calças</a></li>
+        <li><a href="#">Jaquetas</a></li>
+      </ul>
+    </li>
+
+
+
+    <li><a href="#">OUTLET</a></li>
+  </ul>
+
+  <div class="search-and-icons">
+    <div class="search">
+      <span class="red-dot"></span>
+      <input type="text" placeholder="Buscar" />
+      <button><i class="fa fa-search"></i></button>
+    </div>
+
+    <div class="icons">
+      <a href="#" class="icon user"><i class="fa fa-user"></i></a>
+      <a href="#" class="icon cart">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+
+</nav>
